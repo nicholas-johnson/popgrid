@@ -79,7 +79,7 @@ PopGrid
       @include page_header;
     }
 
-## Lead copy
+## lead
 
 The lead mixin lets you do nice, bootstrap style callout headings:
 
@@ -103,8 +103,14 @@ Popgrid
 
 All variables are extracted into the popgrid_overrides.scss file. Make your changes here.
 
+# Browser Support
+
+PopGrid uses box-sizing:border-box, and so is suitable for IE8 and up. Content will remain accessible on IE7 but will not be styled so nicely.
+
 # Triggering responsiveness with Meta Viewport
 
 Be sure to include the meta-viewport element in your header to trigger your responsive layout on mobile devices.
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
