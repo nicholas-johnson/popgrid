@@ -36,6 +36,11 @@ p {
   margin-bottom:1.5em;
 }
 
+@mixin page_header {
+  margin-top:0;
+  border-bottom:1px solid $mid_grey;
+}
+
 @mixin lead {
   font-size: $font_size * $type_scaling_factor;
   font-weight: 200;
