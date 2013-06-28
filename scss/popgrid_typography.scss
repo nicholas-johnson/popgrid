@@ -7,7 +7,7 @@ body {
   // @include sans;
   font-size: $font_size;
   line-height: $line_height;
-  padding-top:100px;
+  font-family: $font_family;
 }
 
 h1,h2,h3 {
@@ -34,4 +34,9 @@ h3 {
 
 p {
   margin-bottom:1.5em;
+}
+
+@mixin lead {
+  font-size: $font_size * $type_scaling_factor;
+  font-weight: 200;
 }
