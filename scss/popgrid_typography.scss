@@ -10,8 +10,8 @@ body {
   font-family: $font_family;
 }
 
-h1,h2,h3 {
-  // @include sans;
+h1,h2,h3,h4,h5,h6 {
+  font-family: $header_font_family;
   line-height:1.1em;
   color:#222;
 }
@@ -26,7 +26,7 @@ h2 {
   font-weight:700;
   margin-top:1.5em;
 }
-h3 {
+h3, h4, h5, h6 {
   font-size:$font_size;
   font-weight:700;
   margin-top:1.5em;
@@ -35,13 +35,20 @@ h3 {
 p {
   margin-bottom:1.5em;
 }
-
+@mixin lead {
+  font-size: $font_size * $type_scaling_factor;
+  font-weight: 200;
+}
 @mixin page_header {
   margin-top:0;
   border-bottom:1px solid $mid_grey;
 }
-
-@mixin lead {
-  font-size: $font_size * $type_scaling_factor;
-  font-weight: 200;
+@mixin text_left{
+  text-align:left
+}
+@mixin text_center{
+  text-align:center
+}
+@mixin text_right{
+  text-align:right
 }

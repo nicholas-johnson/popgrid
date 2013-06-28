@@ -1,0 +1,42 @@
+@import 'popgrid_includes';
+// Import Overrides
+@import 'popgrid_overrides';
+
+@mixin button_block {
+  ul, li {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  li {
+    float:left;
+    margin-left:$padding;
+  }
+}
+
+@mixin btn {
+  font-family: $header_font_family;
+  font-weight:600;
+  display:inline-block;
+  padding:1px 10px;
+  border-radius:5px;
+  background:$blue;
+  box-shadow: inset 0 1px  lighten($submit_button, 15%),inset 0 -1px darken($submit_button, 35%);
+  color: $very_light_grey;
+  text-shadow: 0px 1px lighten($submit_button, 30%), 0px -2px darken($submit_button, 70%);
+  text-decoration:none;
+  @include transition;
+  text-align:center;
+  &:hover {
+    color:white;
+    background:lighten($blue, 10%);
+    box-shadow: inset 0 5px 5px 0px lighten($submit_button, 15%),inset 0 -5px 5px 0px darken($submit_button, 15%), 0 0 5px $submit_button;
+  }
+}
+@mixin btn_small {
+  font-size:$font_size/1.25;
+}
+@mixin btn_large {
+  font-size:$font-size*$type_scaling_factor;
+  padding:$gutter $gutter*2;
+}

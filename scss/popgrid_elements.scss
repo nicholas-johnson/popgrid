@@ -7,3 +7,10 @@
   box-shadow:0 10px 10px rgba(0,0,0,0.1);
   padding:$gutter;
 }
+
+@mixin transition {
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}

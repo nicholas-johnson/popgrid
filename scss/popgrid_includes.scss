@@ -15,6 +15,7 @@ $light_grey: #bbb;
 $mid_grey: #888;
 $dark_grey: #444;
 $very_dark_grey: #222;
+$blue: #485E87;
 
 // Typography
 $font_size:18px;
@@ -22,3 +23,6 @@ $type_scaling_factor: 1.75;
 $line_height: 1.5em;
 $font_family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 $header_font_family: $font_family;
+
+// Buttons
+$submit_button: $blue;
