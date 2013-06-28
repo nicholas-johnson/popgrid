@@ -1,0 +1,37 @@
+@import 'popgrid_includes';
+// Import Overrides
+@import 'popgrid_overrides';
+
+body {
+  color: $dark_grey;
+  // @include sans;
+  font-size: $font_size;
+  line-height: $line_height;
+  padding-top:100px;
+}
+
+h1,h2,h3 {
+  // @include sans;
+  line-height:1.1em;
+  color:#222;
+}
+
+h1 {
+  font-size: $font_size * $type_scaling_factor * $type_scaling_factor;
+  font-weight: 900;
+}
+
+h2 {
+  font-size:$font_size * $type_scaling_factor;
+  font-weight:700;
+  margin-top:1.5em;
+}
+h3 {
+  font-size:$font_size;
+  font-weight:700;
+  margin-top:1.5em;
+}
+
+p {
+  margin-bottom:1.5em;
+}

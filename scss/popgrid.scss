@@ -1,0 +1,138 @@
+@import 'popgrid_includes';
+// Import Overrides
+@import 'popgrid_overrides';
+$gutter: $gutter / 2;
+
+/* Popgrid Layouts */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin row {
+  margin-left: auto;
+  margin-right: auto;
+  display:block;
+  @include clearfix;
+  @media (min-width: $widescreen) {
+    & {
+      @include container_width($num_cols, $widescreen);
+    }
+  }
+  @media (min-width: $desktop) and (max-width: ($widescreen - 1)) {
+    & {
+      @include container_width($num_cols, $desktop);
+    }
+  }
+  @media (min-width: $tablet) and (max-width: ($desktop - 1)) {
+    & {
+      @include container_width($num_cols, $tablet);
+    }
+  }
+  @media (min-width: $iphone) and (max-width: ($tablet - 1)) {
+    & {
+      @include container_width($num_cols, $iphone);
+    }
+  }
+  @media (max-width: $iphone) {
+    & {
+      float:none;
+      width: auto;
+    }
+  }
+}
+
+@mixin container {
+  padding-left: $gutter;
+  padding-right: $gutter;
+  @include clearfix;
+  @include row;
+}
+
+@mixin span($cols) {
+  & {
+    float:left;
+    margin-left: $gutter;
+    margin-right: $gutter;
+  }
+  @media (min-width: $widescreen) {
+    & {
+      @include width($cols, $widescreen);
+    }
+  }
+  @media (min-width: $desktop) and (max-width: ($widescreen - 1)) {
+    & {
+      @include width($cols, $desktop);
+    }
+  }
+  @media (min-width: $tablet) and (max-width: ($desktop - 1)) {
+    & {
+      @include width($cols, $tablet);
+    }
+  }
+  @media (min-width: $iphone) and (max-width: ($tablet - 1)) {
+    & {
+      @include width($cols, $iphone);
+    }
+  }
+  @media (max-width: $iphone) {
+    & {
+      float:none;
+      width: auto;
+    }
+  }
+}
+
+@mixin offset($cols) {
+  & {
+    float:left;
+  }
+  @media (min-width: $widescreen) {
+    & {
+      @include left_inset($cols, $widescreen);
+    }
+  }
+  @media (min-width: $desktop) and (max-width: ($widescreen - 1)) {
+    & {
+      @include left_inset($cols, $desktop);
+    }
+  }
+  @media (min-width: $tablet) and (max-width: ($desktop - 1)) {
+    & {
+      @include left_inset($cols, $tablet);
+    }
+  }
+  @media (min-width: $iphone) and (max-width: ($tablet - 1)) {
+    & {
+      @include left_inset($cols, $iphone);
+    }
+  }
+  @media (max-width: $iphone) {
+    & {
+      float:none;
+      width: auto;
+    }
+  }
+}
+
+// Utility
+
+@mixin width($cols, $page_width) {
+  width: ($page_width - ($gutter * 6)) / $num_cols * $cols
+}
+@mixin container_width($cols, $page_width) {
+  width: ($page_width - ($gutter * 2)) / $num_cols * $cols
+}
+@mixin left_inset($cols, $page_width) {
+  margin-left: ($page_width - ($gutter * 4)) / $num_cols * $cols
+}
