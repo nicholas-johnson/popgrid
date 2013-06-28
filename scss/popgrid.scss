@@ -39,12 +39,7 @@ $gutter: $gutter / 2;
       @include container_width($num_cols, $tablet);
     }
   }
-  @media (min-width: $iphone) and (max-width: ($tablet - 1)) {
-    & {
-      @include container_width($num_cols, $iphone);
-    }
-  }
-  @media (max-width: $iphone) {
+  @media (max-width: ($tablet - 1)) {
     & {
       float:none;
       width: auto;
@@ -62,8 +57,7 @@ $gutter: $gutter / 2;
 @mixin span($cols) {
   & {
     float:left;
-    margin-left: $gutter;
-    margin-right: $gutter;
+    margin: $gutter;
   }
   @media (min-width: $widescreen) {
     & {
@@ -80,12 +74,7 @@ $gutter: $gutter / 2;
       @include width($cols, $tablet);
     }
   }
-  @media (min-width: $iphone) and (max-width: ($tablet - 1)) {
-    & {
-      @include width($cols, $iphone);
-    }
-  }
-  @media (max-width: $iphone) {
+  @media (max-width: ($tablet - 1)) {
     & {
       float:none;
       width: auto;
@@ -112,12 +101,7 @@ $gutter: $gutter / 2;
       @include left_inset($cols, $tablet);
     }
   }
-  @media (min-width: $iphone) and (max-width: ($tablet - 1)) {
-    & {
-      @include left_inset($cols, $iphone);
-    }
-  }
-  @media (max-width: $iphone) {
+  @media (max-width: ($tablet - 1)) {
     & {
       float:none;
       width: auto;
