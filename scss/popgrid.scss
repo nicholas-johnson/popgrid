@@ -1,6 +1,10 @@
 @import 'popgrid_includes';
 // Import Overrides
 @import 'popgrid_overrides';
+// Import Modules
+@import 'popgrid_elements';
+@import 'popgrid_typography';
+@import 'popgrid_buttons';
 $gutter: $gutter / 2;
 
 /* Popgrid Layouts */

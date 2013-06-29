@@ -2,39 +2,39 @@
 // Import Overrides
 @import 'popgrid_overrides';
 
-body {
-  color: $dark_grey;
-  // @include sans;
-  font-size: $font_size;
-  line-height: $line_height;
-  font-family: $font_family;
+@mixin popgrid_typography {
+  body {
+    color: $dark_grey;
+    // @include sans;
+    font-size: $font_size;
+    line-height: $line_height;
+    font-family: $font_family;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: $header_font_family;
+    line-height:1.1em;
+    color:#222;
+  }
+  h1 {
+    font-size: $font_size * $type_scaling_factor * $type_scaling_factor;
+    font-weight: 900;
+  }
+
+  h2 {
+    font-size:$font_size * $type_scaling_factor;
+    font-weight:700;
+    margin-top:1.5em;
+  }
+  h3, h4, h5, h6 {
+    font-size:$font_size;
+    font-weight:700;
+    margin-top:1.5em;
+  }
+  p {
+    margin-bottom:1.5em;
+  }
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: $header_font_family;
-  line-height:1.1em;
-  color:#222;
-}
-
-h1 {
-  font-size: $font_size * $type_scaling_factor * $type_scaling_factor;
-  font-weight: 900;
-}
-
-h2 {
-  font-size:$font_size * $type_scaling_factor;
-  font-weight:700;
-  margin-top:1.5em;
-}
-h3, h4, h5, h6 {
-  font-size:$font_size;
-  font-weight:700;
-  margin-top:1.5em;
-}
-
-p {
-  margin-bottom:1.5em;
-}
 @mixin lead {
   font-size: $font_size * $type_scaling_factor;
   font-weight: 200;
